@@ -20,7 +20,14 @@ $this->produttore = $_produttore;
 
 }
 
-$
+$arrayMovie =[
+
+new Movie ('Le onde del destino', 'Lars von Trier' ,159, 'Zentropa' ), 
+new Movie ('Velluto Blu', 'David Lynch' ,120, 'Filmauro' ), 
+new Movie ('Eyes Wide Shut', 'Stanley kubrick' ,160, 'Warner Bros' ) 
+
+
+]
 
 
 ?>
