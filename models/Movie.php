@@ -14,15 +14,18 @@ class Movie {
       $this->produttore = $_produttore;
       $this->genere = $_genere;   
   }
-
   public function getGenere() {
-    return $this->genere->generePrincipale ?? $this->genere->genereSecondario ?? 'N/A';
+    if ($this->genere) {
+        return $this->genere->generePrincipale . ' - ' . $this->genere->genereSecondario;
+    }
+    
+    return 'N/A';
   }
 
   public function getFullInfo() {
 
       $genereInfo = $this->genere ? ' - Genere: ' . $this->getGenere() : '';
-      
+
       return 'Titolo: ' . $this->titolo . ' - Regista: ' . $this->regista . ' - Durata: ' . $this->durata . ' minuti' . ' - Produttore: ' . $this->produttore . $genereInfo;
   }
 }

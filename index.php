@@ -1,28 +1,15 @@
 <?php
 
-class Movie {
-    public $titolo;
-    public $regista;
-    public $durata = 120;
-    public $produttore;
+include_once __DIR__ .'/models/Genere.php';
+include_once __DIR__ .'/models/Movie.php';
 
-    function __construct($_titolo, $_regista, $_durata, $_produttore) {
-        $this->titolo = $_titolo;
-        $this->regista = $_regista;
-        $this->durata = $_durata;
-        $this->produttore = $_produttore;   
-    }
-
-    public function getFullInfo() {
-        return 'Titolo: ' . $this->titolo . ' - Regista: ' . $this->regista . '  - Durata: ' . $this->durata . ' minuti' . ' - Produttore: ' . $this->produttore;
-    }
-}
-
-$onde = new Movie('Le onde del destino', 'Lars von Trier', 159, 'Zentropa');
-$velluto = new Movie('Velluto Blu', 'David Lynch', 120, 'Filmauro');
-$eyes = new Movie('Eyes Wide Shut', 'Stanley kubrick', 160, 'Warner Bros');
+$onde = new Movie('Le onde del destino', 'Lars von Trier', 159, 'Zentropa', new Genere('Drammatico', 'Dogma95'));
+$velluto = new Movie('Velluto Blu', 'David Lynch', 120, 'Filmauro',new Genere ('Drammatico', 'Thriller'));
+$eyes = new Movie('Eyes Wide Shut', 'Stanley kubrick', 160, 'Warner Bros', new Genere ('Drammatico' , 'Mystery'));
 
 var_dump($onde->getFullInfo());
+var_dump($velluto->getFullInfo());
+var_dump($eyes->getFullInfo());
 
 ?>
 
@@ -38,4 +25,3 @@ var_dump($onde->getFullInfo());
   <body>
     <h1>ciao</h1>
   </body>
-</html>
