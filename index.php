@@ -11,6 +11,7 @@ var_dump($onde->getFullInfo());
 var_dump($velluto->getFullInfo());
 var_dump($eyes->getFullInfo());
 
+var_dump($onde->genere->genereSecondario);
 ?>
 
 <!DOCTYPE html>
