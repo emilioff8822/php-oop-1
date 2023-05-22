@@ -1,4 +1,29 @@
-<
+<? php
+
+class Movie {
+
+public $titolo ;
+public $regista ;
+public $durata = 120;
+public $produttore;
+
+function __construct($_titolo, $_regista, $_durata, $_produttore)
+{
+$this->titolo = $_titolo;
+$this->regista = $_regista;
+$this->durata = $_durata;
+$this->produttore = $_produttore;   
+  
+}
+
+
+
+}
+
+$
+
+
+?>
 
 
 
